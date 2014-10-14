@@ -15,5 +15,5 @@
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
-script.src = '//mr-vit.github.io/SteamWebTools/steamwebtools.base.js';
+script.src = '//gameseller.github.io/SteamWebTools3/steamwebtools.base.js';
 document.body.appendChild(script);
