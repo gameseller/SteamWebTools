@@ -241,10 +241,14 @@ function inventoryPageInit(){
 
 				if(!item.descriptions)
 					item.descriptions = [];
-
+					//function includeJS2(url){
+	//document.getElementsByTagName('body')[0].appendChild(document.createElement('span')).src=url;
+//}
+				//	 includeJS2('http://v1t.su/projects/steam/class-sub.php?jsonp=setSubID&get=sub&value='+item.classid);
+	                       
+				item.descriptions.push({type: 'html', value:'<a href="#" onclick="getSubid(event.target,\''+item.id+'\');return false">Получить SubscriptionID</a>'});
 				item.descriptions.push({value:'ClassID = '+item.classid});
-				item.descriptions.push({value:'<a href="#" onclick="getSubid(event.target,\''+item.id+'\');return false">Получить SubscriptionID</a>'});
-
+				
 				if(!ajaxTarget.descriptions[item.classid])
 					ajaxTarget.descriptions[item.classid] = item.descriptions;
 
@@ -262,7 +266,7 @@ function inventoryPageInit(){
 						link:'javascript:loadGiftNote()',
 						name:'Посмотреть заметку'
 					});
-				}
+					}
 			}
 		} /*else
 		// tf2 items
