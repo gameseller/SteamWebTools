@@ -23,7 +23,7 @@ function init() {
 		var changeCCmenuHTML = '\
 		<style>#cc_menu_btn{min-width:59px;z-index:999;position:fixed;right:0;top:0;background-color:#000;opacity:0.5;}#cc_menu_btn:hover{opacity:1}#cc_list .popup_menu_item{white-space:nowrap}</style>\
 		<span class="pulldown" id="cc_menu_btn" onclick="ShowMenu(this, \'cc_menu\', \'left\', \'bottom\', true);">CC'+(curCC ?': <img src="http://cdn.steamcommunity.com/public/images/countryflags/'+curCC.toLowerCase()+'.gif" /> '+curCC:'')+' </span>\
-<div class="popup_block" id="cc_menu" style="display:none;">\
+<div class="popup_block" id="cc_menu" style="display:none;position:fixed;">\
 <div class="popup_body popup_menu shadow_content" id="cc_list"></div></div>\
 	<div class="popup_block" id="cc_list_edit" style="display:none;">\
 	<div class="popup_body popup_menu shadow_content">\
@@ -222,8 +222,7 @@ function createBlock(title, links){
 	var link;
 	for (var i=0; i < links.length; i++) {
 		link = links[i];
-		out+='<a class="linkbar" href="'+link.href+'" target="_blank"><div class="rightblock">\
-<img src="'+link.icon+'" width="16" height="16" border="0" align="top"></div>'+link.text+'</a>'
+		out+='<a class="linkbar" href="'+link.href+'" target="_blank"><div class="rightblock">\<img src="'+link.icon+'" width="16" height="16" border="0" align="top">'+link.text+'</div></a>'
 	}
 
 	out+='</div></div></div>';
