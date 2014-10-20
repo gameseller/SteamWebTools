@@ -14,8 +14,6 @@ function init() {
 	if(window.location.hash!="#fastbuy")
 		return;
 
-	alert('fastbuy');
-
 	var FinalizeTransaction_old = window.FinalizeTransaction;
 	window.FinalizeTransaction = function(){
 		window.$('accept_ssa').checked=true;
