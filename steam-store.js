@@ -84,7 +84,7 @@ function init() {
 							}
 
 							s += '<b>'+(price.final/100)+'</b> '+price.currency;
-
+							
 							if(data.packages)
 								s += ' (subID:<a href="http://steamdb.info/sub/'+data.packages[0]+'">'+data.packages[0]+'</a>)';
 							// for non-main subs
@@ -93,6 +93,7 @@ function init() {
 								if(pg.length>1){
 									for(var i=1;i<pg.length;i++){
 										var tmp = pg[i].option_text.match(/- \D*(\d+(?:[.,]\d{2})?)/i);
+										alert(tmp);
 										document.querySelector('.swt_price_'+i+'_'+cc+'>span').innerHTML = '<b>'+tmp[tmp.length-1]+'</b> '+price.currency+' (subID:<a href="http://steamdb.info/sub/'+pg[i].packageid+'">'+pg[i].packageid+'</a>)';
 									}
 								}
