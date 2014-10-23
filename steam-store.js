@@ -71,7 +71,7 @@ function init() {
 				reqUrl += itemId+'&cc='+cc;
 
 				new window.Ajax.Request( reqUrl, {
-					method: 'get',
+					method: 'POST',
 					onSuccess: function( transport ) {
 						var s='';
 						
