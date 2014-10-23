@@ -74,6 +74,7 @@ function init() {
 					method: 'get',
 					onSuccess: function( transport ) {
 						var s='';
+						
 
 						if(transport.responseJSON[itemId].success){
 							var data = transport.responseJSON[itemId].data;
@@ -93,7 +94,6 @@ function init() {
 								if(pg.length>1){
 									for(var i=1;i<pg.length;i++){
 										var tmp = pg[i].option_text.match(/- \D*(\d+(?:[.,]\d{2})?)/i);
-										alert(tmp);
 										document.querySelector('.swt_price_'+i+'_'+cc+'>span').innerHTML = '<b>'+tmp[tmp.length-1]+'</b> '+price.currency+' (subID:<a href="http://steamdb.info/sub/'+pg[i].packageid+'">'+pg[i].packageid+'</a>)';
 									}
 								}
