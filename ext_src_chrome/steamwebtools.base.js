@@ -1,4 +1,4 @@
-// ==UserScript==
+// ==UserScript===
 // @include	http://store.steampowered.com/*
 // @include	https://store.steampowered.com/*
 // @include	http://steamcommunity.com/*
